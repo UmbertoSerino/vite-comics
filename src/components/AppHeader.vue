@@ -50,19 +50,18 @@ header.header-top {
 
   section.container {
     height: 100%;
+    width: 65%;
     margin: 0 auto;
     @include flex(row, space-between, center);
 
     img {
       height: 85px;
-      margin-left: 280px;
     }
   }
 
   ul {
     list-style-type: none;
     @include flex(row, center, center);
-    margin-right: 150px;
 
     li {
       padding: .7rem;

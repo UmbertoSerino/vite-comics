@@ -34,11 +34,11 @@ main.main-container {
 
   section.container {
     height: 100%;
+    width: 65%;
     margin: 0 auto;
     @include flex(row, start, center);
 
     h1 {
-      margin-left: 280px;
       font-size: 1.7rem;
       font-family: sans-serif;
 
