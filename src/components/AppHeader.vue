@@ -29,7 +29,7 @@ export default {
       <nav>
         <ul>
           <li v-for="(item, index) in navBar" :key="index">
-            {{ item }}
+            {{ item }}<i class="fa-solid fa-house"></i>
           </li>
         </ul>
 
