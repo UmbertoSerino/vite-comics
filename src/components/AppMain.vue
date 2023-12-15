@@ -1,12 +1,12 @@
 <script>
-import HeroesCard from './HeroesCard.vue';
+import HeroList from './HeroList.vue';
 
 export default {
   name: 'AppMain',
   data() {
     return {};
   },
-  components: { HeroesCard }
+  components: { HeroList }
 }
 </script>
 
@@ -17,7 +17,9 @@ export default {
         <p class="current">Current Series</p>
       </div>
     </section>
-    <HeroesCard />
+    <section class="container-heros-cards">
+      <HeroList />
+    </section>
   </main>
 </template>
 
@@ -51,5 +53,10 @@ main.main-container {
 
     }
   }
+
+}
+
+section.container-heros-cards {
+  @include container(width, margin);
 }
 </style>
