@@ -64,15 +64,17 @@ export default {
   </div>
   <section class="footer-bottom">
     <div class="container-footer-bottom">
-      <button>Sign-Up Now!</button>
-    </div>
-    <div class="container-icon">
-      <p class="follow">Follow us</p>
-      <img src="../assets/img/footer-facebook.png" alt="pictures logo facebook">
-      <img src="../assets/img/footer-twitter.png" alt="picture logo twitter">
-      <img src="../assets/img/footer-youtube.png" alt="picture logo youtube">
-      <img src="../assets/img/footer-pinterest.png" alt="picture logo pinterest">
-      <img src="../assets/img/footer-periscope.png" alt="picture logo periscope">
+      <div>
+        <button>Sign-Up Now!</button>
+      </div>
+      <div class="container-icon">
+        <p class="follow">Follow us</p>
+        <img src="../assets/img/footer-facebook.png" alt="pictures logo facebook">
+        <img src="../assets/img/footer-twitter.png" alt="picture logo twitter">
+        <img src="../assets/img/footer-youtube.png" alt="picture logo youtube">
+        <img src="../assets/img/footer-pinterest.png" alt="picture logo pinterest">
+        <img src="../assets/img/footer-periscope.png" alt="picture logo periscope">
+      </div>
     </div>
 
   </section>
@@ -93,8 +95,8 @@ div.big-container-footer {
 
 section.footer-top {
   height: 370px;
-  width: 65%;
-  margin: 0 auto;
+  @include container(width, margin);
+
 
   color: $footer-text-color;
   @include flex (row, space-between, center);
@@ -132,8 +134,16 @@ section.footer-bottom {
   @include flex(row, space-between, center);
 
   div.container-footer-bottom {
-    width: 65%;
-    margin: 0 auto;
+    @include container(width, margin);
+    @include flex(row, space-between, center);
+
+    button {
+      background-color: $footer-bt-bg-color;
+      color: $footer-text-color;
+      border: 2px solid $footer-border-color;
+      padding: .5rem .7rem;
+      text-transform: uppercase;
+    }
 
     div.container-icon {
       display: flex;
@@ -142,22 +152,16 @@ section.footer-bottom {
 
       p.follow {
         margin-right: 10px;
-        color: red;
-
+        color: $footer-bottom-text;
+        text-transform: uppercase;
+        font-weight: bold;
       }
 
+      img {
+        margin-right: .8rem;
+      }
     }
 
-
-    button {
-      background-color: $footer-bt-bg-color;
-      color: $footer-text-color;
-      border: 1px solid $footer-border-color;
-      padding: 1rem;
-
-    }
   }
-
-
 }
 </style>

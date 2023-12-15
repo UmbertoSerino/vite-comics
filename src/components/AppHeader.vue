@@ -29,7 +29,7 @@ export default {
       <nav>
         <ul>
           <li v-for="(item, index) in navBar" :key="index">
-            {{ item }}<i class="fa-solid fa-house"></i>
+            {{ item }}
           </li>
         </ul>
 
@@ -50,9 +50,8 @@ header.header-top {
 
   section.container {
     height: 100%;
-    width: 65%;
-    margin: 0 auto;
     @include flex(row, space-between, center);
+    @include container(width, margin);
 
     img {
       height: 85px;
@@ -62,6 +61,7 @@ header.header-top {
   ul {
     list-style-type: none;
     @include flex(row, center, center);
+    flex-wrap: wrap;
 
     li {
       padding: .7rem;

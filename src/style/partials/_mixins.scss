@@ -10,3 +10,8 @@
     justify-content: $justify;
     align-items: center;
 }
+
+@mixin container ($width, $margin) {
+    width: 65%;
+    margin: 0 auto
+}

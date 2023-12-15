@@ -1,24 +1,24 @@
 <script>
+import HeroesCard from './HeroesCard.vue';
+
 export default {
   name: 'AppMain',
   data() {
-    return {
-
-    }
+    return {};
   },
+  components: { HeroesCard }
 }
 </script>
 
-<template lang="">
+<template>
   <main class="main-container">
-    <section class="container">
-      <h1>
-        --&triangleright; Content goes here &triangleleft;--
-      </h1>
-
+    <section class="container-jumbotron">
+      <div class="current-text">
+        <p class="current">Current Series</p>
+      </div>
     </section>
+    <HeroesCard />
   </main>
-
 </template>
 
 <style lang="scss" scoped>
@@ -28,19 +28,26 @@ export default {
 main.main-container {
   background-color: $main-bd-color;
   width: 100%;
-  height: 100px;
   color: $main-text-color;
 
 
-  section.container {
+  section.container-jumbotron {
     height: 100%;
-    width: 65%;
-    margin: 0 auto;
+    height: 400px;
     @include flex(row, start, center);
+    background-image: url(../assets/img/jumbotron.jpg);
+    position: relative;
 
-    h1 {
-      font-size: 1.7rem;
-      font-family: sans-serif;
+    div.current-text {
+      @include container(width, margin);
+
+      p.current {
+        background-color: $main-bg-current;
+        padding: .5rem;
+        position: absolute;
+        bottom: 0;
+        transform: translate(0%, 50%);
+      }
 
     }
   }
